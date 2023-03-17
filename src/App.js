@@ -14,7 +14,7 @@ function App() {
   const { login, user, logout } = useContext(AuthContext)
   console.log(user)
 
- 
+
   return (
     <BrowserRouter>
       <nav>
@@ -28,12 +28,12 @@ function App() {
       <div>
         {
           (user.loggedIn) ?
-          <>
-          <button onClick={logout}> Logout</button>
-          <p>Current User: {user.displayName}</p>
-          
-          </> :
-          <button onClick={login}> Login</button>
+            <>
+              <button onClick={logout}> Logout</button>
+              <p>Current User: {user.displayName}</p>
+
+            </> :
+            <button onClick={login}> Login</button>
         }
         {/* user.displayName --> display name is found in metadata when you console.log(user) */}
       </div>
@@ -42,11 +42,11 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/pokemon" element={<Pokemon/>} />
-        <Route path="/post/:uid/:id"  element={<PostSingle/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/pokemon" element={<Pokemon />} />
+        <Route path="/post/:uid/:id" element={<PostSingle />} />
       </Routes>
 
     </BrowserRouter>
@@ -79,10 +79,10 @@ export default App;
 
   // return (
   //   <div className="App">
-  //     {/* <Counter title={'Pushup Counter'} initialCount={10}/> 
-  //     <Counter title={'Situp Counter'}/> 
-  //     <Counter title={'Squat Counter'} initialCount={200}/> 
-  //     <Counter />  
+  //     {/* <Counter title={'Pushup Counter'} initialCount={10}/>
+  //     <Counter title={'Situp Counter'}/>
+  //     <Counter title={'Squat Counter'} initialCount={200}/>
+  //     <Counter />
   //      Tied not tied with function above*/}
 
   //      {
